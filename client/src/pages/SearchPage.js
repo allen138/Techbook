@@ -25,14 +25,15 @@ class SearchPage extends Component {
       <div>
         <HomeNav />
         <Wrapper>
-        <ul className="topFive">
-          {Object.keys(this.state.searchResults).map(key => (
-            <TopFiveProjects
-              key={key}
-              details={this.state.searchResults[key]}
-            />
-          ))}
-        </ul>
+          <h1 className="subTitle">Search Results</h1>
+          <ul className="topFive">
+            {Object.keys(this.state.searchResults).map(key => (
+              <TopFiveProjects
+                key={key}
+                details={this.state.searchResults[key]}
+              />
+            ))}
+          </ul>
         </Wrapper>
         <Footer />
       </div>

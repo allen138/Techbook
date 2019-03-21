@@ -504,6 +504,9 @@ th.link {
     position: absolute;
     top: -40px;
   }
+  .edit-profile{
+      width: 80%;
+  }
 }
 @media (max-width: 520px) {
     .search-container {
