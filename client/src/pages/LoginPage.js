@@ -18,8 +18,8 @@ class Login extends React.Component {
       <div>
         <Navbar />     
         <div className="flexBox">
-          <Registration />
           <LoginForm />
+          <Registration />
         </div>
         <Footer />
       </div>

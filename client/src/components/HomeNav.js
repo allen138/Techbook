@@ -41,8 +41,7 @@ class HomeNav extends Component {
             <div>
                 <nav className="navbar fixed-top navbar-dark bg-dark">
                     <Wrapper>
-                        <Link to="/home" className="navbar-brand homeLink" ><img src="/techLogo.jpg" width="30" height="30" className="d-inline-block align-top" alt="logo" style={{ borderRadius: 7 }} /> Techbook</Link>
-                        <Link to="/favorites" className="navbar-item favoritesLink">Favorites</Link>
+                        <Link to="/home" className="navbar-brand homeLink" ><img src="/techLogo.jpg" width="30" height="30" className="d-inline-block align-top" alt="logo" style={{ borderRadius: 7 }} /><span className="logoTitle"> Techbook</span></Link>                      
                         <div className="dropdown projectsDropdown">
                             <button className="dropBtn">Projects</button>
                             <div className="dropdown-content">
@@ -50,6 +49,7 @@ class HomeNav extends Component {
                                 <Link to="/projects" className="dropLinks">Your Projects</Link>
                             </div>
                         </div>
+                        <Link to="/favorites" className="navbar-item favoritesLink">Favorites</Link>
                         <div className="search-container">
                             <h6 className="searchBar-title"><strong>Find a Project</strong></h6>
                             <input
@@ -59,7 +59,6 @@ class HomeNav extends Component {
                             type="text" 
                             id="character-search" 
                             className="form-control" />
-                            <br />
                             <div className="text-right">
                                 <button onClick={this.handleSubmit} type="submit" className="btn btn-primary btn-md" id="search-btn"><span className="fa fa-search"></span>
                                     Search

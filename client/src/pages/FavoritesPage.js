@@ -39,7 +39,7 @@ class FavoritesPage extends Component {
                 <Wrapper>
                 <div>
                     <h1 className="subTitle">Favorites</h1>
-                    <ul>
+                    <ul className="favList">
                         {this.state.favorites.map((fav, key) => {
                         return <Favorites
                             key={key}

@@ -203,7 +203,7 @@ router
 
 router.route("/api/projects/topfive").get(function(req, res) {
   db.Projects.findAll({
-    limit: 5,
+    limit: 4,
     order: [["createdAt", "DESC"]]
   }).then(dbProjects => {
     res.json(dbProjects);

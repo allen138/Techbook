@@ -52,13 +52,6 @@ class AllProjectsPage extends Component {
                     <Link to={"/project/" + project.id}>View Project</Link>
                   </td>
                   <td>{project.description}</td>
-                  <td>
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      style={{ width: 300, height: 300 }}
-                    />
-                  </td>
                 </tr>
               ))}
             </tbody>

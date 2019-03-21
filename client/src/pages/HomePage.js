@@ -43,7 +43,7 @@ class Home extends Component {
             <Wrapper>
                 <div className="jumbotron jumbotron-fluid">
                     <div className="container">
-                        <img className="jumbotron-avatar" src={avatar} alt={firstName} width="150" height="150" />
+                        <img id="jumbotron-avatar" src={avatar} alt={firstName} width="150" height="150" />
                         <h1 className="display-4">{display}</h1>
                         <p className="lead">Search for Startups to Endorse or <Link to="/projects" id="linkToProjects">Add A Project</Link> to get Endorsed!</p>
 
@@ -51,8 +51,8 @@ class Home extends Component {
                     </div>
                     <div>
                     <h1 className="subTitle">New Posts!</h1>
-                    <div className="topFive">
-                        <ul>
+                    <div>
+                        <ul className="topFive">
                             {Object.keys(this.state.projects).map(key => <TopFiveProjects
                                 key={key}
                                 details={this.state.projects[key]}
