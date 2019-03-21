@@ -469,6 +469,9 @@ th.link {
     right: 100px;
     top: 58px;
   }
+  #display-image{
+    width: 100%
+  }
 }
 @media (max-width: 620px) {
   .navbar {
