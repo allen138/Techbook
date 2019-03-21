@@ -30,9 +30,9 @@ class Home extends Component {
 
   render() {
     let display;
-    const { avatar, firstName } = this.state.user
+    const { firstName } = this.state.user
     if (this.state.user) {
-        display = <p>Hello {this.state.user.firstName}!</p>
+        display = <h1 className="display-4">Welcome {firstName}!</h1>
     } else {
         display = <p>Hello there! <a href="/">Sign up here!</a></p>
     }
@@ -42,8 +42,7 @@ class Home extends Component {
             <HomeNav options={this.state.user} />
             <Wrapper>
                 <div className="jumbotron jumbotron-fluid">
-                    <div className="container">
-                        <img id="jumbotron-avatar" src={avatar} alt={firstName} width="150" height="150" />
+                    <div className="container jumboContainer">
                         <h1 className="display-4">{display}</h1>
                         <p className="lead">Search for Startups to Endorse or <Link to="/projects" id="linkToProjects">Add A Project</Link> to get Endorsed!</p>
 
