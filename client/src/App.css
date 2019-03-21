@@ -384,7 +384,8 @@ th.link {
   font-weight: 800;
   margin: 0 5px 0 3px;
 }
-.favList, #projectContainer{
+.favList,
+#projectContainer {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 20px;
@@ -398,8 +399,9 @@ th.link {
   list-style-type: none;
   overflow: hidden;
 }
-.favList, #userProjects {
-    padding-inline-start: 0;
+.favList,
+#userProjects {
+  padding-inline-start: 0;
 }
 .favList > .favorites-container {
   background-color: whitesmoke;
@@ -410,7 +412,8 @@ th.link {
   list-style-type: none;
   overflow: hidden;
 }
-.favorites-container:hover, .project-info:hover {
+.favorites-container:hover,
+.project-info:hover {
   border: 1px solid #343a40;
   cursor: pointer;
 }
@@ -469,8 +472,8 @@ th.link {
     right: 100px;
     top: 58px;
   }
-  #display-image{
-    width: 100%
+  #display-image {
+    width: 100%;
   }
 }
 @media (max-width: 620px) {
@@ -482,11 +485,10 @@ th.link {
   }
   #avatar {
     position: absolute;
-    top: -40px;
+    top: 0px;
   }
   .search-container {
-    position: relative;
-    right: 25%;
+    bottom: -20px;
   }
   .dropdown-menu-right {
     right: 120px;
@@ -494,12 +496,23 @@ th.link {
   }
   .comment-textbox {
     width: 75%;
-    margin-left: 2%
+    margin-left: 2%;
   }
 }
-@media (max-width: 325px) {
-    .comment-textbox {
-        width: 70%;
+@media (max-width: 550px) {
+  #avatar {
+    position: absolute;
+    top: -40px;
+  }
+}
+@media (max-width: 520px) {
+    .search-container {
+        bottom: 15px;
       }
+}
+@media (max-width: 325px) {
+  .comment-textbox {
+    width: 70%;
+  }
 }
 /*---------------*/
