@@ -1,5 +1,5 @@
 import axios from "axios";
-const cloud_name = "phelan";
+const cloud_name = "dlfa7zuoj";
 let url = `https://api.cloudinary.com/v1_1/${cloud_name}/upload`;
 
 export function getAllProjects() {
