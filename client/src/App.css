@@ -423,7 +423,7 @@ th.link {
 @media (max-width: 1450px) {
   #gitHubLoginBtn,
   #googleLogInBtn {
-    width: 25%;
+    width: 40%;
   }
   #avatar {
     position: absolute;
@@ -479,6 +479,9 @@ th.link {
 @media (max-width: 620px) {
   .navbar {
     height: 120px;
+  }
+  #lognav{
+      height: 70px;
   }
   body {
     margin-top: 130px;
