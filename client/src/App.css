@@ -418,7 +418,7 @@ th.link {
 /* --------------*/
 
 /* Media Queries */
-@media (max-width: 1450px) {
+@media (max-width: 1456px) {
   #gitHubLoginBtn,
   #googleLogInBtn {
     width: 40%;
