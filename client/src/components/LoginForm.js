@@ -49,7 +49,7 @@ class LoginForm extends Form {
   
   render() {
     return (
-      <div>
+      <div className="login-container">
         <Wrapper>
           <div className="loginTitle">
             <h2>Login</h2>

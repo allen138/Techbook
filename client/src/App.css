@@ -68,16 +68,14 @@ h6 {
 }
 #search-btn {
   background-color: #18a0ac;
-  font-size: 13px;
   position: absolute;
   top: 30px;
   left: 170px;
-  width: 80px;
-  height: 35px;
+  width: 50px;
+  height: 33px;
 }
 #search-btn:hover {
-  width: 83px;
-  height: 38px;
+  background-color: rgb(14, 135, 146)
 }
 .topFive {
   display: grid;
@@ -485,6 +483,9 @@ th.link {
   }
   body {
     margin-top: 130px;
+  }
+  .login-container{
+    margin-top: -36px;
   }
   #avatar {
     position: absolute;
