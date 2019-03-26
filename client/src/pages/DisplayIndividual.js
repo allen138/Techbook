@@ -31,7 +31,7 @@ class DisplayIndividual extends Component {
     API.getComments(this.props.match.params.id)
       .then(res => this.setState({ comments: res.data }))
       .catch(err => console.log(err));
-  };
+  }
 
   getFavorites = () => {
     API.getUsersFavorites().then(res =>
@@ -44,6 +44,12 @@ class DisplayIndividual extends Component {
       .then(res => {
         this.setState({ comments: res.data });
       })
+      .catch(err => console.log(err));
+  };
+  deleteComment = id => {
+    console.log('clicked');
+    API.deleteThisComment(id)
+      .then(res => this.loadComments())
       .catch(err => console.log(err));
   };
 
@@ -98,7 +104,6 @@ class DisplayIndividual extends Component {
   };
 
   render() {
-
     let { title, image, link, fundLink, description, id } = this.state.project;
     const { favorites } = this.state;
     if (link) {
@@ -158,7 +163,11 @@ class DisplayIndividual extends Component {
             </form>
             <div className="commentList">
               {Object.keys(this.state.comments).map(key => (
-                <Comment key={key} details={this.state.comments[key]} />
+                <Comment
+                  key={key}
+                  details={this.state.comments[key]}
+                  deleteComment={this.deleteComment}
+                />
               ))}
             </div>
           </div>

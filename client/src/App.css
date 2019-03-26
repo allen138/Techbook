@@ -382,6 +382,15 @@ th.link {
   font-weight: 800;
   margin: 0 5px 0 3px;
 }
+.remove-comment{
+  background: none;
+  border: 0;
+  line-height: 1;
+  opacity: 0
+}
+.comment:hover, .remove-comment:hover{
+  opacity: 1;
+}
 .favList,
 #projectContainer {
   display: grid;

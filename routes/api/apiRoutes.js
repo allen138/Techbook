@@ -302,24 +302,36 @@ router.route("/api/comments").post(function(req, res) {
   }
 });
 
-router.route("/api/comments/:id").get(function(req, res) {
-  if (req.params.id) {
-    db.Projects.findOne({
-      where: {
-        id: req.params.id
-      }
-    }).then(dbProject => {
-      if (dbProject) {
-        db.Review.findAll({
-          order: [["createdAt", "DESC"]],
-          where: { ProjectId: req.params.id }
-        }).then(dbReview => res.json(dbReview));
-      } else {
-        res.json({});
-      }
-    });
-  } else {
-    res.json({});
-  }
+router
+  .route("/api/comments/:id")
+  .get(function(req, res) {
+    if (req.params.id) {
+      db.Projects.findOne({
+        where: {
+          id: req.params.id
+        }
+      }).then(dbProject => {
+        if (dbProject) {
+          db.Review.findAll({
+            order: [["createdAt", "DESC"]],
+            where: { ProjectId: req.params.id }
+          }).then(dbReview => res.json(dbReview));
+        } else {
+          res.json({});
+        }
+      });
+    } else {
+      res.json({});
+    }
+  })
+router.route("/api/deleteComment/:id").delete(function(req, res) {
+  db.Review.destroy({
+    where: {
+      id: req.params.id
+    }
+  }).then( dbReview => {
+    res.json(dbReview)
+  });
 });
+
 module.exports = router;
