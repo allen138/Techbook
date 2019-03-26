@@ -47,7 +47,6 @@ class DisplayIndividual extends Component {
       .catch(err => console.log(err));
   };
   deleteComment = id => {
-    console.log('clicked');
     API.deleteThisComment(id)
       .then(res => this.loadComments())
       .catch(err => console.log(err));

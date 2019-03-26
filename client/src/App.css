@@ -388,7 +388,7 @@ th.link {
   line-height: 1;
   opacity: 0
 }
-.comment:hover, .remove-comment:hover{
+.comment:hover .remove-comment{
   opacity: 1;
 }
 .favList,
